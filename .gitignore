@@ -1,8 +1,12 @@
 Thumbs.db*
-.DS_Store
+.DS_Store*
 HELP.md
 .gradle
 build/
+target/
+data_mysql
+.allure
+mysql_data
 
 ### STS ###
 .apt_generated
@@ -41,5 +45,6 @@ out/
 
 ### Exclusions ###
 !gradle/wrapper/gradle-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
-!**/src/test/**
+!src/test/test/**
