@@ -42,7 +42,6 @@ out/
 *.zip
 *.tar.gz
 *.rar
-docs/img_1.png
 
 ### Exclusions ###
 !gradle/wrapper/gradle-wrapper.jar
