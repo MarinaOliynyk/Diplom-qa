@@ -83,7 +83,7 @@ public class PaymentsTest {
         paymentsPage.fieldCardOwner.setValue(dataGenerator.generateCardOwnerName());
         paymentsPage.fieldCardCode.setValue(dataGenerator.getCVV());
         paymentsPage.proceedButton.click();
-        paymentsPage.form.shouldHave(text("Номер карты")).shouldHave(text("Неверный формат")).shouldBe(visible);
+        paymentsPage.failedNotification.should(appear, Duration.ofSeconds(15));
     }
 
     @Test
@@ -106,7 +106,7 @@ public class PaymentsTest {
         paymentsPage.fieldCardOwner.setValue(dataGenerator.generateCardOwnerName());
         paymentsPage.fieldCardCode.setValue(dataGenerator.getCVV());
         paymentsPage.proceedButton.click();
-        paymentsPage.failedNotification.should(appear, Duration.ofSeconds(15));
+        paymentsPage.form.shouldHave(text("Номер карты")).shouldHave(text("Неверный формат")).shouldBe(visible);
     }
 
     @Test
